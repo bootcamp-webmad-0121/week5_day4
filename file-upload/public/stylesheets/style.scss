@@ -1,0 +1,33 @@
+img {
+  width: 100%
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.navbar {
+  margin-bottom: 50px;
+}
+
+.gallery-grid figure {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-grid figcaption {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.carousel-matadero img{
+  height: 250px;
+  object-fit: cover;
+}

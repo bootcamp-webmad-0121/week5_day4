@@ -1,0 +1,66 @@
+<div class="container">
+
+    <h1>Galería de imágenes</h1>
+
+    <hr>
+
+    <div class="row gallery-grid">
+
+        {{#each pictures}}
+
+        <div class="col-md-3">
+
+            <figure>
+                <img src="{{path}}" alt="{{name}}">
+                <figcaption>
+                    <p>{{name}}</p>
+                </figcaption>
+            </figure>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    <hr>
+
+    <div class="carousel-matadero">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                {{#each pictures}}
+
+                <li class="glide__slide">
+                    <figure>
+                        <img src="{{path}}" alt="{{name}}">
+                        <figcaption>
+                            <p>{{name}}</p>
+                        </figcaption>
+                    </figure>
+                </li>
+
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+
+<script>
+    new Glide('.carousel-matadero', {
+        type: 'carousel',
+        perView: 3,
+        gap: 90,
+        breakpoints: {
+            500: {
+                perView: 2
+            },
+            800: {
+                perView: 1
+            }
+        }
+    }).mount()
+</script>

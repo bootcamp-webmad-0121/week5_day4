@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <h1>Subida de imágenes local</h1>
+
+            <hr>
+
+            <form action="/galeria/subida-local" method="POST" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="imageName">Nombre imagen</label>
+                    <input type="text" class="form-control" id="imageName" name="imageName">
+                </div>
+
+                <div class="form-group">
+                    <label for="imageFile">Image</label>
+                    <input type="file" class="form-control-file" id="imageFile" name="imageFile">
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block">Subir imagen</button>
+            </form>
+
+        </div>
+    </div>
+</div>
